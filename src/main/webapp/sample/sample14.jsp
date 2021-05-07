@@ -30,8 +30,14 @@ function fn_interval(){ //interver이란 특정 시간마다 이 함수를 실�
 		$('#interval').append("안녕하세요!!");
 	}, 1000);
 }
-
 function fn_clock(){
+	var intver= setInterval(function(){
+		fn_getDt();
+	},1000);
+	fn_getDt();
+}
+
+function fn_getDt(){
 	var dt = new Date();
 	var hour = dt.getHours();
 	var minute = dt.getMinutes();
